@@ -17,10 +17,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            // $table->string('title');
-            // $table->longText('body');
-            // $table->foreignIdFor(User::class)->nullable();
-            // $table->string('image');
+            'title' => $this->faker->sentence(),
+            'body' => $this->faker->text(500),
+            'image' => $this->faker->imageUrl()
         ];
     }
 }
